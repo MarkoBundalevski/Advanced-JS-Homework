@@ -229,9 +229,9 @@ function animate() {
     enemy.takeHit();
     player.isAttacking = false;
 
-    gsap.to('#enemyHealth', {
-      width: enemy.health + '%'
-    })
+    gsap.to("#enemyHealth", {
+      width: enemy.health + "%",
+    });
   }
 
   //if player misses
@@ -250,9 +250,9 @@ function animate() {
   ) {
     player.takeHit();
     enemy.isAttacking = false;
-    gsap.to('#playerHealth', {
-      width: player.health + '%'
-    })
+    gsap.to("#playerHealth", {
+      width: player.health + "%",
+    });
   }
 
   //if enemy misses
