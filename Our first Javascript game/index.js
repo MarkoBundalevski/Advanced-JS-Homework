@@ -134,7 +134,7 @@ const enemy = new Fighter({
     },
     death: {
       imageSrc: "../assets/fighter/Death.png",
-      framesMax: 7,
+      framesMax: 1,
     },
   },
   attackBox: {
@@ -183,10 +183,10 @@ function animate() {
 
   //player movement
   if (keys.a.pressed && player.lastKey === "a") {
-    player.velocity.x = -4;
+    player.velocity.x = -5;
     player.switchSprite("run");
   } else if (keys.d.pressed && player.lastKey === "d") {
-    player.velocity.x = 4;
+    player.velocity.x = 5;
     player.switchSprite("run");
   } else {
     player.switchSprite("idle");
@@ -201,10 +201,10 @@ function animate() {
 
   //enemy movement
   if (keys.ArrowLeft.pressed && enemy.lastKey === "ArrowLeft") {
-    enemy.velocity.x = -4;
+    enemy.velocity.x = -5;
     enemy.switchSprite("run");
   } else if (keys.ArrowRight.pressed && enemy.lastKey === "ArrowRight") {
-    enemy.velocity.x = 4;
+    enemy.velocity.x = 5;
     enemy.switchSprite("run");
   } else {
     enemy.switchSprite("idle");
